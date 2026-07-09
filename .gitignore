@@ -7,3 +7,5 @@ frontend/build/
 *.pkl
 data/images/
 data/fashion_dataset.csv
+backend/models/fashion_index.faiss
+backend/models/valid_ids.pkl
