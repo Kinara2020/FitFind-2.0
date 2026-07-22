@@ -1,17 +1,8 @@
 flask
 flask-cors
 pandas
-<<<<<<< HEAD
 onnxruntime
 pillow
 faiss-cpu
 huggingface_hub
 gunicorn
-=======
-torch
-torchvision
-pillow
-faiss-cpu
-huggingface_hub
-gunicorn
->>>>>>> b60b69f68e1892a25104e3a613be14167e0488ef
