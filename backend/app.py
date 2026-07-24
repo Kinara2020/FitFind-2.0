@@ -33,10 +33,11 @@ if not os.path.exists(CSV_PATH):
 # --- Download + extract images.zip once if not cached locally ---
 if not os.path.exists(IMAGES_DIR):
     print("Downloading images.zip from HuggingFace...")
-    r = requests.get(ZIP_URL)
-    r.raise_for_status()
-    with open(ZIP_PATH, 'wb') as f:
-        f.write(r.content)
+    with requests.get(ZIP_URL, stream=True) as r:
+        r.raise_for_status()
+        with open(ZIP_PATH, 'wb') as f:
+            for chunk in r.iter_content(chunk_size=8192):
+                f.write(chunk)
     print("Extracting images...")
     with zipfile.ZipFile(ZIP_PATH, 'r') as z:
         z.extractall(IMAGES_DIR)

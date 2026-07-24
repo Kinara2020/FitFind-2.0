@@ -35,8 +35,8 @@ class SimilaritySearch:
             )
             print("✅ Downloaded successfully")
 
-        print("Loading FAISS index...")
-        self.index = faiss.read_index(faiss_path)
+        print("Loading FAISS index (memory-mapped)...")
+        self.index = faiss.read_index(faiss_path, faiss.IO_FLAG_MMAP)
 
         with open(ids_path, 'rb') as f:
             self.valid_ids = pickle.load(f)
