@@ -6,4 +6,3 @@ pillow
 faiss-cpu
 huggingface_hub
 gunicorn
-requests
