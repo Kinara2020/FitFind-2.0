@@ -56,3 +56,7 @@ class FeatureExtractor:
         except Exception as e:
             print(f"Error: {e}")
             return None
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76a00d94feca95b3fcbe09f1c0dc0b70d67aa9e2
